@@ -11,6 +11,10 @@ $(document).ready(function() {
       alert('Please enter a valid name!');
     } else if ($('.textArea').val() === '') {
       alert('Please fill out form!');
+    } else {
+      snippets.data.push({[textFieldValue]: textAreaValue});
+      console.log(snippets);
+      localStorage.setItem('snippets', JSON.stringify(snippets));
     }
 
 
@@ -19,16 +23,6 @@ $(document).ready(function() {
     
 
 
-    snippets.data.push({[textFieldValue]: textAreaValue});
-    console.log(snippets);
-
-  // localStorage.setItem('myFormTextData', textFieldValue);  
-  // $('.textField').val('');
-
-  // localStorage.setItem('myFormTextAreaData', textAreaValue);  
-  // $('.textArea').val('');
-  
-  localStorage.setItem('snippets', JSON.stringify(snippets));
 
   });
   
