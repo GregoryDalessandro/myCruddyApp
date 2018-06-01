@@ -13,7 +13,8 @@ Goals:
 - [ ] Display all snippets
 - [ ] Search for a snippet using the name
 - [ ] Add ability to delete data 
-- [ ] Store name and code into an object within local storage, name as prop and code as val
+- [x] Store name and code into an object within local storage, name as prop and code as val
+- [ ] Don't allow to save duplicate objects, alert that you already saved this object
 
 
 <pre>JSON.stringify(myObject.json, null, 2)</pre>
