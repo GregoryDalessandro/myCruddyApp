@@ -10,6 +10,7 @@ Goals:
 - [x] Make it handle code! (use a textarea instead of a text)
 - [x] Have two fields, one is a short name the other is the snippet
 - [x] Store the name and code inside localStorage
+- [ ] Retrieve stringified object data from localStorage
 - [ ] Display all snippets
 - [ ] Search for a snippet using the name
 - [ ] Add ability to delete data 
@@ -18,7 +19,7 @@ Goals:
 - [x] Alert user to fill out snippet name if blank while saving
 - [x] Alert user to fill out snippet text if blank while saving
 - [x] Alert user to fill out both textField and textArea if blank while saving
-- [ ] Don't allow to save duplicate objects, alert that you already saved this object
+- [x] Prevent saving duplicate objects, alert that you already saved this object
 
 
 <pre>JSON.stringify(myObject.json, null, 2)</pre>

@@ -11,19 +11,25 @@ $(document).ready(function() {
       alert('Please enter a valid name!');
     } else if ($('.textArea').val() === '') {
       alert('Please fill out form!');
-    } else {
+    } else if (snippets.data.length === 0) {
       snippets.data.push({[textFieldValue]: textAreaValue});
-      console.log(snippets);
-      localStorage.setItem('snippets', JSON.stringify(snippets));
+      localStorage.setItem('snippets', JSON.stringify(snippets));    
+    } else {
+      snippets.data.forEach(function(snippet) {
+        if (JSON.stringify(snippet) === JSON.stringify({[textFieldValue]: textAreaValue})) {
+          alert('You have already saved!');
+        } else {
+          snippets.data.push({[textFieldValue]: textAreaValue});
+          localStorage.setItem('snippets', JSON.stringify(snippets));
+        }
+      });
     }
+  $('.textField').val('');
+  $('.textArea').val('');
 
-
-    $('#test').html($('.textArea').val().replace(/\n/g, '<br>'));
-    $('.debug').html($('.textArea').val().replace(/\n/g, '<br>'));
+  //$('#test').html($('.textArea').val().replace(/\n/g, '<br>'));
+  //$('.debug').html($('.textArea').val().replace(/\n/g, '<br>'));
     
-
-
-
   });
   
   $('.getData').on('click', function() {
@@ -31,12 +37,6 @@ $(document).ready(function() {
     let retrieveSnippetData = localStorage.getItem('myFormTextAreaData');
     $('.snippetContainer').text('retrieveSnippetName: ' + retrieveSnippetName + ' retrieveSnippetData: ' + retrieveSnippetData );
   });
-
-  // this is old can be removed
-  // $('.textField').on('keyup', function() {
-  //   let textFieldValue = $('.textField').val();
-  //   $('.debug').text(textFieldValue);
-  // });
 
 });
 
