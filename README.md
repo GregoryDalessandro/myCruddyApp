@@ -14,6 +14,10 @@ Goals:
 - [ ] Search for a snippet using the name
 - [ ] Add ability to delete data 
 - [x] Store name and code into an object within local storage, name as prop and code as val
+- [ ] prevent saving to local storage if either textbox or textarea is blank, create matching mesage
+- [x] Alert user to fill out snippet name if blank while saving
+- [x] Alert user to fill out snippet text if blank while saving
+- [x] Alert user to fill out both textField and textArea if blank while saving
 - [ ] Don't allow to save duplicate objects, alert that you already saved this object
 
 

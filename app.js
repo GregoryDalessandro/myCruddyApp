@@ -4,8 +4,20 @@ $(document).ready(function() {
   $('.submitForm').on('click', function() {
     let textFieldValue = $('.textField').val();
     let textAreaValue = $('.textArea').val();
+    
+    if ($('.textField').val() === '' && $('.textArea').val() === '') {
+      alert('Please enter a valid name, and fill out form!');
+    } else if($('.textField').val() === '') {
+      alert('Please enter a valid name!');
+    } else if ($('.textArea').val() === '') {
+      alert('Please fill out form!');
+    }
+
+
     $('#test').html($('.textArea').val().replace(/\n/g, '<br>'));
     $('.debug').html($('.textArea').val().replace(/\n/g, '<br>'));
+    
+
 
     snippets.data.push({[textFieldValue]: textAreaValue});
     console.log(snippets);
