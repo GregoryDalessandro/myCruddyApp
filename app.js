@@ -37,9 +37,13 @@ $(document).ready(function() {
     //console.log(retrievedSnippets);
     retrievedSnippets.data.forEach(function(snippet) {
       for (var key in snippet) {
-        $('.snippetContainer').append('<div class="snippet" id="' + key +'">'+ snippet[key] + '</div>');
+       if ($('#' + key).length === 0) {
+          $('.snippetContainer').append('<div class="snippet" id="' + key +'">'+ snippet[key] + '</div>');     
+        }
+        //console.log($('#' + key).length === 0);
       }
     });
+        console.log($('.snippet'));
   });
 
 });
