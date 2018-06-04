@@ -33,9 +33,13 @@ $(document).ready(function() {
   });
   
   $('.getData').on('click', function() {
-    let retrieveSnippetName = localStorage.getItem('myFormTextData');
-    let retrieveSnippetData = localStorage.getItem('myFormTextAreaData');
-    $('.snippetContainer').text('retrieveSnippetName: ' + retrieveSnippetName + ' retrieveSnippetData: ' + retrieveSnippetData );
+    let retrievedSnippets = JSON.parse(localStorage.getItem('snippets'));
+    //console.log(retrievedSnippets);
+    retrievedSnippets.data.forEach(function(snippet) {
+      for (var key in snippet) {
+        $('.snippetContainer').append('<div class="snippet" id="' + key +'">'+ snippet[key] + '</div>');
+      }
+    });
   });
 
 });

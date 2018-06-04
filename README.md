@@ -11,7 +11,7 @@ Goals:
 - [x] Have two fields, one is a short name the other is the snippet
 - [x] Store the name and code inside localStorage
 - [ ] Retrieve stringified object data from localStorage
-- [ ] Display all snippets
+- [x] Display all snippets
 - [ ] Search for a snippet using the name
 - [ ] Add ability to delete data 
 - [x] Store name and code into an object within local storage, name as prop and code as val
