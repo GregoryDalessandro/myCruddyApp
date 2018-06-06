@@ -16,24 +16,32 @@
 
   <h1>Snippet Saver</h1>
   
-  <div class= "sidenav"></div>
-
-  <div class="buttons">
-    <button class="submitForm">Save snippet</button>  
-    <button class="getData">Show all snippets</button> 
+  <div class="sidenav">
+    <div>
+      <input  type="text" placeholder="Filter"></div>
+    </div>
+    <div class="sideSnippetContainer"></div>
   </div>
-  
-  <div class="userTextInputContainer">
-    <div class="userTextInput">
-      <div class="inputName">
-        <input class="textField" type="text" name="firstInputField" placeholder="Snippet name">
-      </div>
-      <div>
-        <textarea class="textArea" type="text" name="firstTextArea" placeholder="Snippet code"></textarea>
+
+  <div class="main">
+    <div class="buttons">
+      <button class="submitForm">Save snippet</button>  
+      <button class="getData">Show all snippets</button> 
+    </div>
+
+    <div class="userTextInputContainer">
+      <div class="userTextInput">
+        <div class="inputName">
+          <input class="textField" type="text" id="inputSnippetName" placeholder="Snippet name">
+        </div>
+        <div>
+          <textarea class="textArea" type="text" name="firstTextArea" placeholder="Snippet code" rows="20" cols="80"></textarea>
+        </div>
       </div>
     </div>
+
+    <div class="snippetContainer"></div>
   </div>
-  <div class="snippetContainer"></div>
 
 </body>
 </html>

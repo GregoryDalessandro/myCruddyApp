@@ -2,14 +2,13 @@ $(document).ready(function() {
   let snippets = { data: [] };
 
   $('.submitForm').on('click', function() {
-    let textFieldValue = $('.textField').val();
+    let textFieldValue = $('#inputSnippetName').val();
     let textAreaValue = $('.textArea').val();
     let currentSnippet = JSON.stringify({[textFieldValue]: textAreaValue});
-    //console.log(currentSnippet);
 
-    if ($('.textField').val() === '' && $('.textArea').val() === '') {
+    if ($('#inputSnippetName').val() === '' && $('.textArea').val() === '') {
       alert('Please enter a valid name, and fill out form!');
-    } else if($('.textField').val() === '') {
+    } else if($('#inputSnippetName').val() === '') {
       alert('Please enter a valid name!');
     } else if ($('.textArea').val() === '') {
       alert('Please fill out form!');
@@ -20,10 +19,10 @@ $(document).ready(function() {
       } else {
         alert('snippet already saved!'); 
       }
+      $('.sidenav').append('<div class="sideSnippet">' + textFieldValue + '<div>');
     }
-    //console.log(snippets);
 
-  $('.textField').val('');
+  $('#inputSnippetName').val('');
   $('.textArea').val('');
 
   //$('#test').html($('.textArea').val().replace(/\n/g, '<br>'));

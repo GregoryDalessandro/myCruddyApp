@@ -1,31 +1,93 @@
+body {
+  background-color: #f4f9ff;
+}
+
 h1 {
+  position: absolute;
+  left: 0; right: 0;
   text-align: center;
+  height: 92px;
+}
+
+.sidenav {
+  background-color: #ddecff;
+  position: absolute;
+  left: 0; top: 92px; bottom: 0;
+  width: 136px;
+  z-index: 1;
+  border: solid #d1e4ff;
+  border-width: 2px;
+}
+
+.sideSnippet {
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.main {
+  background-color: #ffffff;
+  position: absolute;
+  left: 136px; top: 92px; right: 0; bottom: 0;
+  padding-top: 10px
+  border-top: solid #edf5ff;
+  border-width: 2px;
+
 }
 
 .buttons {
+  padding: 10px;
   text-align: center;
 }
 
+.submitForm {
+  font-size: 18px;
+}
+
+.getData {
+  font-size: 18px;
+}
 .userTextInputContainer {
   text-align: center;
 }
 
 .userTextInput {
+  background-color: #f4f9ff;
   text-align: center;
   display: inline-block;
-  border: solid black;
-  size: 10px;
-  margin: 10px;
-}
-.inputName {
-  /*text-align: left;*/
-  margin: 5px;
-}
-.snippetContainer {
-  visibility: hidden;
-  display: inline-block;
-  border: solid black;
   padding: 10px;
-  size: 10px;
+  margin: 10px;
+  border: solid #edf5ff;
+  border-width: 2px;
+}
+.textField {
+  font-size: 18px;
 }
 
+.textArea {
+  font-size: 18px;
+}
+
+.inputName {
+  margin: 5px;
+}
+
+.snippetContainer {
+  margin: 10px;
+  background-color:;
+  visibility: hidden;
+  display: inline-block;
+  border: solid #edf5ff;
+  /*padding: 10px;*/
+  border-width: 2px;
+}
+
+.snippetName {
+  background-color: #f4f9ff;
+  border-bottom: solid #edf5ff;
+  border-width: 1px;
+}
+
+.snippet {
+  font-size: 18px;
+  margin: 10px;
+}

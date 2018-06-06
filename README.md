@@ -24,10 +24,11 @@ Goals:
 - [ ] pull variable name from textarea to autofill textbox
 - [ ] highlight div on hover
 - [ ] select/highlight single snippet by clicking on div
-- [ ] hide border until snippets are saved
+- [x] hide snippetContainer border until snippets are saved
 - [ ] store my code on repl.it
 - [ ] add a sidebar of snippets
 - [ ] add snippet search to sidebar above snippet list
+- [ ] dynamically resize textField based on the text's width
 
 <pre>JSON.stringify(myObject.json, null, 2)</pre>
 <code></code>
