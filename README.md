@@ -33,6 +33,10 @@ Goals:
 - [x] prevent sideSnippets from disappearing on page refresh
 - [ ] add ability to delete single snippet
 - [ ] refactor classes to be more modular and add ids
+- [ ] add a way to edit existing snippet code
+- [ ] be able to select multiple sideSnippets
+- [ ] add a overwrite check if given a duplicate input code
+- [ ] add a confirmation message/alert when delete all
 
 <pre>JSON.stringify(myObject.json, null, 2)</pre>
 <code></code>
