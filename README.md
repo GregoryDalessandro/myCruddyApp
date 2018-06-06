@@ -29,6 +29,7 @@ Goals:
 - [ ] add a sidebar of snippets
 - [ ] add snippet search to sidebar above snippet list
 - [ ] dynamically resize textField based on the text's width
+- [x] prevent sideSnippets from disappearing on page refresh
 
 <pre>JSON.stringify(myObject.json, null, 2)</pre>
 <code></code>

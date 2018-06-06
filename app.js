@@ -1,5 +1,22 @@
 $(document).ready(function() {
   let snippets = { data: [] };
+  let retrievedSnippets = JSON.parse(localStorage.getItem('snippets'));
+  
+  retrievedSnippets.data = retrievedSnippets.data.map(function(snippet) {
+    return JSON.parse(snippet);
+  });
+  retrievedSnippets.data.forEach(function(snippet) { 
+    for (var key in snippet) {
+      $('.sidenav').append('<div class="sideSnippet">' + key + '<div>'); 
+    }
+    
+  });
+
+  //console.log(retrievedSnippets);
+  
+  snippets.data.forEach(function(snippet) {
+    console.log(snippet);
+  }); 
 
   $('.submitForm').on('click', function() {
     let textFieldValue = $('#inputSnippetName').val();
@@ -35,18 +52,17 @@ $(document).ready(function() {
     if ($('.snippetContainer').css('visibility', 'hidden')) {
       $('.snippetContainer').css('visibility', 'visible');
     }
-    console.log(snippets)
     let retrievedSnippets = JSON.parse(localStorage.getItem('snippets'));
-   
+  
     retrievedSnippets.data = retrievedSnippets.data.map(function(snippet) {
       return JSON.parse(snippet);
     });
-    console.log(retrievedSnippets);
     retrievedSnippets.data.forEach(function(snippet) {
       for (var key in snippet) {
         if ($('#' + key).length === 0) {
           $('.snippetContainer').append('<div class="snippet" id="' + key +'"><div class="snippetName">' + key + '</div><pre><code>'+ snippet[key] + '</code></pre></div>');
-          //hljs.highlightBlock($('.snippet').get(0));     
+        console.log($('#' + key));
+        hljs.highlightBlock($("#" + key).get(0))
         }
       }
     }); 

@@ -3,6 +3,7 @@ body {
 }
 
 h1 {
+  color: #69b5fc;
   position: absolute;
   left: 0; right: 0;
   text-align: center;
@@ -73,7 +74,7 @@ h1 {
 
 .snippetContainer {
   margin: 10px;
-  background-color:;
+  /*background-color:;*/
   visibility: hidden;
   display: inline-block;
   border: solid #edf5ff;
@@ -82,7 +83,8 @@ h1 {
 }
 
 .snippetName {
-  background-color: #f4f9ff;
+  font-size: 25px;
+  background-color: #ffffff;
   border-bottom: solid #edf5ff;
   border-width: 1px;
 }
