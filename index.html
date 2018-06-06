@@ -6,16 +6,34 @@
   <!-- <script  src="libs/jquery.js" ></script> -->
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <script src="app.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css">
+
 </head>
 <body>
 
- <input class="textField" type="text" name="firstInputField" placeholder="Snippet name">
- <button class="submitForm">Save snippet</button>  
- <button class="getData">Get all snippets</button> 
- <textarea class="textArea" type="text" name="firstTextArea" placeholder="Snippet code"></textarea>
- <div class="snippetContainer"></div>
- <div class ="test"></div>
+  <h1>Snippet Saver</h1>
+  
+  <div class= "sidenav"></div>
 
-<div class="debug"></div>
+  <div class="buttons">
+    <button class="submitForm">Save snippet</button>  
+    <button class="getData">Show all snippets</button> 
+  </div>
+  
+  <div class="userTextInputContainer">
+    <div class="userTextInput">
+      <div class="inputName">
+        <input class="textField" type="text" name="firstInputField" placeholder="Snippet name">
+      </div>
+      <div>
+        <textarea class="textArea" type="text" name="firstTextArea" placeholder="Snippet code"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="snippetContainer"></div>
+
 </body>
 </html>

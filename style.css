@@ -1,0 +1,31 @@
+h1 {
+  text-align: center;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.userTextInputContainer {
+  text-align: center;
+}
+
+.userTextInput {
+  text-align: center;
+  display: inline-block;
+  border: solid black;
+  size: 10px;
+  margin: 10px;
+}
+.inputName {
+  /*text-align: left;*/
+  margin: 5px;
+}
+.snippetContainer {
+  visibility: hidden;
+  display: inline-block;
+  border: solid black;
+  padding: 10px;
+  size: 10px;
+}
+
