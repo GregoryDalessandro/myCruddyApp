@@ -13,7 +13,7 @@ Goals:
 - [x] Retrieve stringified object data from localStorage
 - [x] Display all snippets
 - [ ] Search for a snippet using the name
-- [ ] Add ability to delete data 
+- [x] Add ability to delete data 
 - [x] Store name and code into an object within local storage, name as prop and code as val
 - [x] prevent saving to local storage if either textbox or textarea is blank
 - [x] Alert user to fill out snippet name if blank while saving
@@ -30,6 +30,7 @@ Goals:
 - [ ] add snippet search to sidebar above snippet list
 - [ ] dynamically resize textField based on the text's width
 - [x] prevent sideSnippets from disappearing on page refresh
+- [ ] add ability to delete single snippet
 
 <pre>JSON.stringify(myObject.json, null, 2)</pre>
 <code></code>

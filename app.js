@@ -1,5 +1,8 @@
 $(document).ready(function() {
   let snippets = { data: [] };
+  let setLocalStorageAsEmptySnippets = function() { localStorage.setItem('snippets', JSON.stringify(snippets));}; 
+  
+  setLocalStorageAsEmptySnippets();
   let retrievedSnippets = JSON.parse(localStorage.getItem('snippets'));
   
   retrievedSnippets.data = retrievedSnippets.data.map(function(snippet) {
@@ -61,13 +64,18 @@ $(document).ready(function() {
       for (var key in snippet) {
         if ($('#' + key).length === 0) {
           $('.snippetContainer').append('<div class="snippet" id="' + key +'"><div class="snippetName">' + key + '</div><pre><code>'+ snippet[key] + '</code></pre></div>');
-        console.log($('#' + key));
+        //console.log($('#' + key));
         hljs.highlightBlock($("#" + key).get(0))
         }
       }
     }); 
   });
-});
 
-// tags: []
-// [‘collection’, ‘es6’]
+  $('.deleteAll').on('click', function() { 
+    $('.sideSnippet').remove();
+    $('.snippet').remove();
+    snippets = { data: [] };
+    setLocalStorageAsEmptySnippets();
+  });
+  
+});

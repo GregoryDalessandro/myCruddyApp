@@ -2,6 +2,7 @@ body {
   background-color: #f4f9ff;
 }
 
+
 h1 {
   color: #69b5fc;
   position: absolute;
@@ -47,6 +48,11 @@ h1 {
 .getData {
   font-size: 18px;
 }
+
+.deleteAll {
+  font-size: 18px;
+}
+
 .userTextInputContainer {
   text-align: center;
 }
