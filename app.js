@@ -2,7 +2,7 @@ $(document).ready(function() {
   let snippets = { data: [] };
   let setLocalStorageAsEmptySnippets = function() { localStorage.setItem('snippets', JSON.stringify(snippets));}; 
   
-  setLocalStorageAsEmptySnippets();
+  //setLocalStorageAsEmptySnippets();
   let retrievedSnippets = JSON.parse(localStorage.getItem('snippets'));
   
   retrievedSnippets.data = retrievedSnippets.data.map(function(snippet) {

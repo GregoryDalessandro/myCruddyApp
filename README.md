@@ -23,14 +23,16 @@ Goals:
 - [x] Prevent appending duplicate snippet divs
 - [ ] pull variable name from textarea to autofill textbox
 - [ ] highlight div on hover
+- [ ] highlight sideSnippet on hover
 - [ ] select/highlight single snippet by clicking on div
 - [x] hide snippetContainer border until snippets are saved
 - [ ] store my code on repl.it
-- [ ] add a sidebar of snippets
+- [x] add a sidebar of snippets
 - [ ] add snippet search to sidebar above snippet list
 - [ ] dynamically resize textField based on the text's width
 - [x] prevent sideSnippets from disappearing on page refresh
 - [ ] add ability to delete single snippet
+- [ ] refactor classes to be more modular and add ids
 
 <pre>JSON.stringify(myObject.json, null, 2)</pre>
 <code></code>
